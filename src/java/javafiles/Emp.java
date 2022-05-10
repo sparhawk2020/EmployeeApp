@@ -1,5 +1,15 @@
 package javafiles;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Emp {
         private int id;
         private String name;

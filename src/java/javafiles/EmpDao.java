@@ -22,11 +22,11 @@ public class EmpDao {
         this.template = template;
     }
     public int save(Emp p){
-        String sql="insert into employee(name,salary,designation) values('"+p.getName()+"',"+p.getSalary()+",'"+p.getDesignation()+"')";
+        String sql="insert into employee(id, name,salary,designation) values("+p.getId()+",'"+p.getName()+"',"+p.getSalary()+",'"+p.getDesignation()+"')";
         return template.update(sql);
     }
-    public int update(Emp p){
-        String sql="update employee set name='"+p.getName()+"', salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id="+p.getId()+"";
+    public int update(Emp p, Integer oldid){
+        String sql="update employee set name='"+p.getName()+"', id="+p.getId()+", salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id=oldid";
         return template.update(sql);
     }
     public int delete(int id){
@@ -34,7 +34,7 @@ public class EmpDao {
         return template.update(sql);
     }
     public Emp getEmpById(int id){
-        String sql="select * from emploee where id=?";
+        String sql="select * from employee where id=?";
         return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Emp>(Emp.class));
     }
     public List<Emp> getEmployees(){

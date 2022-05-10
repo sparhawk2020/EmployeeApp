@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>List of Employees</h1>
+<div class="container">
+
+        <table class="table">
+
+            <thead>
+                    <tr>
+                         <th>ID</th><th>Name</th><th>Salary</th><th>Designation</th>
+                    </tr>
+            </thead>
+  <!-*@thymesVar id="categorylist" type=""*/-->
+
+            <tbody>
+                <tr th:each="p:${list}">
+                    <td th:text="${p.getId()}"></td>
+                    <td th:text="${p.name}"></td>
+                    <td th:text="${p.salary}"></td>
+                    <td th:text="${p.designation}"></td>
+                    <td>  <a type="button" class="btn btn-success"  th:href="@{empedit1(id=${p.getId()})}">Edit</a> </td>
+
+                    <td>  <a type="button" class="btn btn-success"  th:href="@{empedit1(id=${p.id})}">Edit</a> </td>
+
+
+
+
+                    <td>  <a type="button" class="btn btn-danger"  th:href="@{deleteemp(id=${p.getId()})}">Delete</a> </td>
+
+                </tr>
+            </tbody>
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+    <a class="btn btn-success" th:href="@{/empform1}">Add Employee</a>
+
+
+</div>
+
+</body>
+
+
+
+</html>
