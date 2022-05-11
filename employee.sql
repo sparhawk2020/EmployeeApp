@@ -27,12 +27,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `employee`
 --
 
+
+use heroku_8c365a01fae1d08;
+
 CREATE TABLE `employee` (
   `ID` int(11) NOT NULL,
   `Name` varchar(30) NOT NULL,
   `Salary` float NOT NULL,
   `Designation` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `employee`
