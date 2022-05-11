@@ -26,7 +26,7 @@ public class EmpDao {
         return template.update(sql);
     }
     public int update(Emp p, Integer oldid){
-        String sql="update employee set name='"+p.getName()+"', id="+p.getId()+", salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id=oldid";
+        String sql="update employee set name='"+p.getName()+"', id="+p.getId()+", salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id= " + oldid;
         return template.update(sql);
     }
     public int delete(int id){

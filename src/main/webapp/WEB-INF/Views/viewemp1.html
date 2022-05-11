@@ -38,12 +38,12 @@
                     <td th:text="${p.designation}"></td>
                     <td>  <a type="button" class="btn btn-success"  th:href="@{empedit1(id=${p.getId()})}">Edit</a> </td>
 
-                    <td>  <a type="button" class="btn btn-success"  th:href="@{empedit1(id=${p.id})}">Edit</a> </td>
+                    <td>  <a type="button" class="btn btn-danger"  th:href="@{delete(id=${p.id})}">Delete</a> </td>
 
 
 
 
-                    <td>  <a type="button" class="btn btn-danger"  th:href="@{deleteemp(id=${p.getId()})}">Delete</a> </td>
+
 
                 </tr>
             </tbody>
