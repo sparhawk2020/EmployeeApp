@@ -5,7 +5,7 @@
 
 
 
-
+    <bean id="applicationService" class="javafiles.EmpDao"></bean>
 
 
 </beans>
