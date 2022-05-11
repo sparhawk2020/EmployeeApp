@@ -27,6 +27,9 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
     </bean>
 
 
+    <bean id="dao" class="javafiles.EmpDao">
+        <property name="template" ref="jt"></property>
+    </bean>
 
     <bean id="templateEngine"
           class="org.thymeleaf.spring5.SpringTemplateEngine">
