@@ -3,6 +3,7 @@ package javafiles;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
@@ -14,6 +15,7 @@ import java.util.List;
 
 
 @Service
+@Component
 public class EmpDao {
 
     JdbcTemplate template;
