@@ -41,8 +41,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.
     </bean>
 
     <bean id="templateResolver"
-          class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
-        <constructor-arg ref="servletContext"/>
+          class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/WEB-INF/Views/" />
         <property name="suffix" value=".html" />
         <property name="templateMode" value="HTML5" />
